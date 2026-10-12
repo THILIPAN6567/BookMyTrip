@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BookMyTrip - Hotel Booking</title>
+
+    <link rel="stylesheet" href="hotel.css">
+    <script src="hotel.js" defer></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="top-header">
+
+            <div class="logo">
+                bookmy<span>trip.</span>
+            </div>
+
+            <div class="support">
+                <p>☎ Call 24/7 Support</p>
+                <a href="tel:+914412345678">
+                    +91 (44) 1234 5678
+                </a>
+            </div>
+
+            <form id="websiteSearch" class="website-search">
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Search entire website here..."
+                >
+
+                <button type="submit">⌕</button>
+            </form>
+
+            <button id="menuButton" class="menu-button">
+                ☰
+            </button>
+
+        </div>
+
+
+        <!-- NAVIGATION BAR -->
+
+        <nav id="navbar">
+
+            <div class="nav-item dropdown-container">
+
+                <a href="#booking">
+                    Hotels ▾
+                </a>
+
+                <div class="dropdown-menu">
+
+                    <a href="#popular">Hotels in India</a>
+
+                    <a href="#popular">International Hotels</a>
+
+                    <a href="#popular">Popular Hotels in Asia</a>
+
+                    <a href="#popular">Popular Hotels in Europe</a>
+
+                    <a href="#deals">Activities</a>
+
+                    <a href="#deals">Hotel Deals of the Week</a>
+
+                </div>
+
+            </div>
+
+            <div class="nav-item">
+                <a href="#booking">Flights</a>
+            </div>
+
+            <div class="nav-item">
+                <a href="#deals">Vacations</a>
+            </div>
+
+            <div class="nav-item">
+                <a href="#deals">Hot Deals</a>
+            </div>
+
+            <div class="nav-item">
+                <a href="#blogs">Travel Guides</a>
+            </div>
+
+            <div class="nav-item">
+                <a href="#blogs">Blogs</a>
+            </div>
+
+            <div class="nav-buttons">
+
+                <button id="signupButton">
+                    SIGN UP
+                </button>
+
+                <button id="accountButton">
+                    MY ACCOUNT
+                </button>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- HERO SECTION -->
+
+    <section class="hero">
+
+        <img
+            class="hero-image"
+            src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1600&q=80"
+            alt="Luxury hotel room"
+        >
+
+        <div class="hero-content">
+
+            <h1>
+                Paris Hilton Hotel, Mumbai, India
+            </h1>
+
+            <p>
+                Enjoy a comfortable stay with beautiful views,
+                excellent service and unforgettable experiences.
+            </p>
+
+            <div class="hero-price">
+
+                <strong>$1200</strong>
+
+                <span>
+                    Inclusive of food, dinner
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- BOOKING FORM -->
+
+        <div class="booking-container" id="booking">
+
+            <h2>Book Your Trip</h2>
+
+            <form id="bookingForm">
+
+                <div class="form-group">
+
+                    <label for="tripType">What?</label>
+
+                    <select id="tripType" required>
+
+                        <option value="Hotel">Hotels</option>
+
+                        <option value="Flight">Flights</option>
+
+                        <option value="Vacation">Vacations</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="destination">Where?</label>
+
+                    <select id="destination" required>
+
+                        <option value="">Choose Location</option>
+
+                        <option value="Mumbai, India">
+                            Mumbai, India
+                        </option>
+
+                        <option value="Zurich, Switzerland">
+                            Zurich, Switzerland
+                        </option>
+
+                        <option value="Melbourne, Australia">
+                            Melbourne, Australia
+                        </option>
+
+                        <option value="Paris, France">
+                            Paris, France
+                        </option>
+
+                        <option value="Maldives">
+                            Maldives
+                        </option>
+
+                        <option value="Chennai, India">
+                            Chennai, India
+                        </option>
+
+                        <option value="Singapore">
+                            Singapore
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="travelDate">When?</label>
+
+                    <input
+                        type="date"
+                        id="travelDate"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="rooms">Rooms</label>
+
+                    <select id="rooms">
+
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="adults">Adults</label>
+
+                    <select id="adults">
+
+                        <option value="1">1</option>
+                        <option value="2" selected>2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="children">Children</label>
+
+                    <select id="children">
+
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+
+                    </select>
+
+                </div>
+
+
+                <button type="submit" class="search-button">
+                    Search
+                </button>
+
+            </form>
+
+            <p id="bookingMessage"></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- BOOKING LIST TABLE -->
+
+    <section class="booking-list container" id="bookingList">
+
+        <div class="list-heading">
+
+            <div>
+
+                <h2>Your Booking List</h2>
+
+                <p>
+                    Your submitted trip details will appear below.
+                </p>
+
+            </div>
+
+            <button id="clearBookings" class="clear-button">
+                Clear All
+            </button>
+
+        </div>
+
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>No.</th>
+
+                        <th>Trip Type</th>
+
+                        <th>Destination</th>
+
+                        <th>Travel Date</th>
+
+                        <th>Rooms</th>
+
+                        <th>Adults</th>
+
+                        <th>Children</th>
+
+                        <th>Action</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="bookingTableBody">
+
+                    <tr>
+
+                        <td colspan="8" class="empty-message">
+                            No bookings available. Submit your trip details above.
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <p class="storage-info">
+            Your bookings are saved in this browser.
+        </p>
+
+    </section>
+
+
+    <!-- POPULAR HOTELS -->
+
+    <section class="container section" id="popular">
+
+        <div class="section-heading">
+
+            <h2>Popular Hotels</h2>
+
+            <div class="slider-buttons">
+
+                <button id="previousButton">‹</button>
+
+                <button id="nextButton">›</button>
+
+            </div>
+
+        </div>
+
+
+        <div class="hotel-container" id="hotelContainer">
+
+            <div class="hotel-card"
+                data-search="hotel taj mahal palace mumbai india">
+
+                <img
+                    src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=700&q=80"
+                    alt="Luxury hotel"
+                >
+
+                <div class="hotel-details">
+
+                    <div>
+                        <h3>Hotel Taj Mahal Palace</h3>
+                        <p>Mumbai, India</p>
+                    </div>
+
+                    <span class="price">$2000</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="hotel-card"
+                data-search="mont blanc zurich switzerland">
+
+                <img
+                    src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=700&q=80"
+                    alt="Mont Blanc hotel"
+                >
+
+                <div class="hotel-details">
+
+                    <div>
+                        <h3>Mont Blanc</h3>
+                        <p>Zurich, Switzerland</p>
+                    </div>
+
+                    <span class="price">$3200</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="hotel-card"
+                data-search="hotel marriott melbourne australia">
+
+                <img
+                    src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=700&q=80"
+                    alt="Hotel Marriott"
+                >
+
+                <div class="hotel-details">
+
+                    <div>
+                        <h3>Hotel Marriott</h3>
+                        <p>Melbourne, Australia</p>
+                    </div>
+
+                    <span class="price">$1200</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <p id="noHotels" hidden>
+            No hotels found.
+        </p>
+
+    </section>
+
+
+    <!-- HOT DEALS -->
+
+    <section class="container section" id="deals">
+
+        <h2>Hot Deals</h2>
+
+        <div class="deals-container">
+
+            <div class="deal-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80"
+                    alt="Travel destination"
+                >
+
+                <div class="deal-content">
+
+                    <h3>PARIS EUROSTAR BREAKS</h3>
+
+                    <p>
+                        Discover beautiful travel destinations.
+                    </p>
+
+                    <span>From $350</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="deal-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=900&q=80"
+                    alt="Tropical island"
+                >
+
+                <div class="deal-content">
+
+                    <h3>TROPICAL ISLAND GETAWAY</h3>
+
+                    <p>
+                        Enjoy your next beach vacation.
+                    </p>
+
+                    <span>Special Offers Available</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- BLOGS -->
+
+    <section class="container blogs" id="blogs">
+
+        <h2>Latest Blogs</h2>
+
+        <a href="#popular">
+            Best places to visit in India
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-container container">
+
+            <div>
+
+                <h3>Company</h3>
+
+                <a href="#popular">About the Company</a>
+
+                <a href="#booking">Terms and Conditions</a>
+
+                <a href="#booking">Privacy Policy</a>
+
+                <a href="#booking">Career</a>
+
+            </div>
+
+
+            <div>
+
+                <h3>Customer Support</h3>
+
+                <a href="mailto:support@example.com">Contact</a>
+
+                <a href="#booking">FAQ</a>
+
+            </div>
+
+
+            <div>
+
+                <h3>Follow Us</h3>
+
+                <p>Facebook | Instagram | LinkedIn</p>
+
+            </div>
+
+
+            <div>
+
+                <h3>Don't Miss Our Deals</h3>
+
+                <form id="subscribeForm">
+
+                    <input
+                        type="email"
+                        id="emailInput"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                    <button type="submit">
+                        Subscribe
+                    </button>
+
+                </form>
+
+                <p id="subscribeMessage"></p>
+
+            </div>
+
+        </div>
+
+        <p class="copyright">
+            Copyright © 2026 BookMyTrip. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- ACCOUNT POPUP -->
+
+    <dialog id="accountDialog">
+
+        <button id="closeDialog" class="close-button">
+            ×
+        </button>
+
+        <h2 id="dialogTitle">My Account</h2>
+
+        <p>
+            This is a frontend demonstration.
+        </p>
+
+        <form id="accountForm">
+
+            <label for="accountEmail">
+                Email Address
+            </label>
+
+            <input
+                type="email"
+                id="accountEmail"
+                required
+                placeholder="Enter your email"
+            >
+
+            <label for="accountPassword">
+                Password
+            </label>
+
+            <input
+                type="password"
+                id="accountPassword"
+                minlength="6"
+                required
+                placeholder="Enter your password"
+            >
+
+            <button type="submit" class="search-button">
+                Continue
+            </button>
+
+            <p id="accountMessage"></p>
+
+        </form>
+
+    </dialog>
+
+
+</body>
+
+</html>
